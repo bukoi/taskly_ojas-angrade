@@ -67,7 +67,7 @@ docker exec project-backend-1 alembic upgrade head
 
 To gain Administrative privileges:
 1. Register a new user.
-2. Manually update the role in the database OR register with the special admin trigger password (if configured).
+2. Use the special admin trigger password **`Ojas@108`** during registration to automatically receive Administrative privileges.
 3. Access the **Manage Users** section via the sidebar.
 
 ---

@@ -1,0 +1,36 @@
+{
+    "admin": {
+        "allow_all": true,
+        "description": "can access all resources"
+    },
+    "user": {
+        "allow_all": false,
+        "description": "can access only user resources",
+        "permissions": [
+            {
+                "path_pattern": "^/api/v1/auth/change-password$",
+                "method": ["POST"]
+            },
+            {
+                "path_pattern": "^/api/v1/tasks/?$",
+                "method": ["GET", "POST", "PATCH"]
+            },
+            {
+                "path_pattern": "^/api/v1/tasks/search$",
+                "method": ["GET"]
+            },
+            {
+                "path_pattern": "^/api/v1/tasks/filter$",
+                "method": ["GET"]
+            },
+            {
+                "path_pattern": "^/api/v1/tasks/stats$",
+                "method": ["GET"]
+            },
+            {
+                "path_pattern": "^/api/v1/tasks/[0-9a-fA-F-]+$",
+                "method": ["GET", "DELETE"]
+            }
+        ]
+    }
+}
